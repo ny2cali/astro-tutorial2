@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import '../../styles/global.css';
 
 title: My Third Blog Post
 author: Astro Learner
