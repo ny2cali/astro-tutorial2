@@ -1,5 +1,4 @@
 ---
+const { path, label } = Astro.props;
 ---
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/blog/">Blog</a>
+<a href={`path`}>{label}</a>
