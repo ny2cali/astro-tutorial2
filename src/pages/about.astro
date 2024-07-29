@@ -1,11 +1,8 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import '../layouts/BaseLayout.astro';
 
 
-const pageTitle = "About Me";
+const pageTitle = "About";
 
 const identity = {
   firstName: "Sarah",
@@ -24,13 +21,10 @@ const skillColor = "navy";
 const fontWeight = "bold";
 ---
 
-<html lang="en">
+<BaseLayout pageTitle = {pageTitle} >
+
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+	
 		<style define:vars={{skillColor}}>
 			h1 {
 				color: purple;
@@ -44,7 +38,6 @@ const fontWeight = "bold";
 		</style>
 	</head>
 
-	<body>
 		<h1>My Astro Site</h1>
 		<Header />
 		<h1>{pageTitle}</h1>
@@ -73,9 +66,7 @@ const fontWeight = "bold";
 
 		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 	
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
-</html>
+
+
+</BaseLayout>
+
