@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -15,6 +17,7 @@ const finished = false;
 const goal = 3;
 
 const skillColor = "navy";
+const fontWeight = "bold";
 ---
 
 <html lang="en">
@@ -32,7 +35,7 @@ const skillColor = "navy";
 
 			.skill {
 				color: var(--skillColor);
-				font-weight: bold;
+				font-weight: var(--fontWeight);
 			}
 		</style>
 	</head>
